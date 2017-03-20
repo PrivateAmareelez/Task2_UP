@@ -2,7 +2,6 @@ package part1.entity;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
 
 public class CirclePanel extends JPanel implements Indicator {
     private int state = -1;
@@ -12,7 +11,6 @@ public class CirclePanel extends JPanel implements Indicator {
         super.paintComponent(g);
 
         Rectangle bound = g.getClipBounds();
-        Ellipse2D circle = new Ellipse2D.Double(bound.getCenterX(), bound.getCenterY(), bound.getWidth(), bound.getHeight());
         switch (state) {
             case 1:
                 g.setColor(Color.GREEN);
@@ -24,7 +22,7 @@ public class CirclePanel extends JPanel implements Indicator {
                 g.setColor(getBackground());
         }
 
-        g.fillOval(0, 0, bound.width - 1, bound.height - 1);
+        g.fillOval(0, 0, bound.width, bound.height);
     }
 
     @Override

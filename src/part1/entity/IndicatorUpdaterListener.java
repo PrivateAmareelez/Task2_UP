@@ -1,6 +1,6 @@
-package part1.action;
+package part1.entity;
 
-import part1.entity.Indicator;
+import part1.action.TextProcessor;
 
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
